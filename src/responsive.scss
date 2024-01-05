@@ -1,27 +1,59 @@
 @import "breakpoints";
 
 @include xs {
-
     .header {
         &-top {
+            .icon-and-burger {
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 20px;
+                .hamburger {
+                    display: block;
+                    cursor: pointer;
+                    i {
+                        background-color: red;
+                    }
+                }
+            }
+            .hamburger {
+                display: block !important;
+            }
             .social-icons {
                 ul {
                     justify-content: center;
                 }
             }
-
-            .search {
+            .call-btn {
                 display: none;
             }
         }
 
         &-bottom {
-            display: none;
+            .pc-nav {
+                display: none !important;
+            }
+
+            .inside-link {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+                padding: 30px;
+                transition: all 0.3s ease-in-out;
+                li {
+                    border-bottom: 3px solid crimson;
+                    padding: 10px 0px;
+                    border-radius: 2px;
+                }
+                a {
+                    font-size: small;
+                }
+            }
         }
     }
 
     .cards {
-
         &-top {
             margin-bottom: 50px;
 
@@ -436,7 +468,6 @@
                     }
                 }
             }
-
         }
 
         &-bottom {
@@ -450,7 +481,6 @@
             &-right {
                 text-align: center !important;
                 margin-bottom: 8px;
-
             }
 
             &-mid {
@@ -536,7 +566,6 @@
     }
 
     .admin {
-
         .col-md-5 {
             width: 100%;
 
@@ -1502,8 +1531,6 @@
                                 letter-spacing: 1px;
                             }
                         }
-
-
                     }
                 }
             }
@@ -1519,26 +1546,41 @@
             p {
                 font-size: 12px;
             }
-            input{
+            input {
                 letter-spacing: 1px !important;
             }
-            textarea{
+            textarea {
                 letter-spacing: 1px !important;
             }
         }
     }
-
 }
 
 @include sm {
-
     .header {
         &-top {
+            .icon-and-burger {
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 20px;
+                .hamburger {
+                    display: block;
+                    cursor: pointer;
+                    i {
+                        background-color: red;
+                    }
+                }
+            }
+            .hamburger {
+                display: block !important;
+            }
             .social-icons {
                 ul {
                     justify-content: center;
                 }
-
+            }
+            .call-btn {
+                display: none;
             }
 
             .logo {
@@ -1551,7 +1593,29 @@
         }
 
         &-bottom {
-            display: none;
+            // display: none;
+
+            .pc-nav {
+                display: none !important;
+            }
+
+            .inside-link {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+                padding: 30px;
+                transition: all 0.3s ease-in-out;
+                li {
+                    border-bottom: 3px solid crimson;
+                    padding: 10px 0px;
+                    border-radius: 2px;
+                }
+                a {
+                    font-size: small;
+                }
+            }
         }
     }
 
@@ -2027,20 +2091,56 @@
             }
         }
     }
-
 }
 
 @include md {
-
     .header {
         &-top {
-            .search {
+            .icon-and-burger {
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 20px;
+                .hamburger {
+                    display: block;
+                    cursor: pointer;
+                    i {
+                        background-color: red;
+                    }
+                }
+            }
+            .hamburger {
+                display: block !important;
+            }
+            .social-icons {
+                ul {
+                    justify-content: center;
+                }
+            }
+            .call-btn {
                 display: none;
             }
         }
 
         &-bottom {
-            display: none;
+            // display: none;
+            .pc-nav {
+                display: none !important;
+            }
+
+            .inside-link {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+                padding: 30px;
+                transition: all 0.3s ease-in-out;
+                li {
+                    border-bottom: 3px solid crimson;
+                    padding: 10px 0px;
+                    border-radius: 2px;
+                }
+            }
         }
     }
 
@@ -2100,7 +2200,6 @@
                 }
             }
         }
-
     }
 
     .picks {
@@ -2123,7 +2222,6 @@
                     a {
                         font-size: 11px;
                     }
-
                 }
 
                 h3 {
@@ -2176,7 +2274,6 @@
                 margin-bottom: 30px;
             }
         }
-
     }
 
     .sports {
@@ -2308,11 +2405,9 @@
                 margin-bottom: 30px;
             }
         }
-
     }
 
     .footer {
-
         &-top {
             padding: 60px 0 40px 0;
 
@@ -3084,8 +3179,8 @@
         }
     }
 
-    .update{
-        &-form{
+    .update {
+        &-form {
             padding: 16px 20px;
 
             .header {
@@ -3116,13 +3211,29 @@
             }
         }
     }
-
 }
 
 @include lg {
-
     .cards {
         &-top {
+            .icon-and-burger {
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 20px;
+                .hamburger {
+                    display: block;
+                    cursor: pointer;
+                    i {
+                        background-color: red;
+                    }
+                }
+            }
+            .hamburger {
+                display: block !important;
+            }
+            .call-btn {
+                display: none;
+            }
             &-left {
                 &-text {
                     padding: 25px;
@@ -3130,7 +3241,6 @@
                     h3 {
                         a {
                             font-size: 1.3rem;
-
                         }
                     }
                 }
@@ -3144,7 +3254,6 @@
                     h3 {
                         a {
                             font-size: 1.3rem;
-
                         }
                     }
                 }
@@ -3152,6 +3261,24 @@
         }
 
         &-bottom {
+            .pc-nav {
+                display: none !important;
+            }
+
+            .inside-link {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+                padding: 30px;
+                transition: all 0.3s ease-in-out;
+                li {
+                    border-bottom: 3px solid crimson;
+                    padding: 10px 0px;
+                    border-radius: 2px;
+                }
+            }
             &-left {
                 &-text {
                     top: 20%;
@@ -3236,7 +3363,6 @@
                 }
             }
         }
-
     }
 
     .picks {
@@ -3342,7 +3468,6 @@
             h3 {
                 a {
                     font-size: 2rem;
-
                 }
             }
         }
@@ -3373,7 +3498,6 @@
 
         .logo {
             padding: 0 80px;
-
         }
 
         &-login {
@@ -3434,7 +3558,6 @@
 
         .logo {
             padding: 0 80px;
-
         }
 
         &-login {
@@ -3495,7 +3618,6 @@
 
         .logo {
             padding: 0 80px;
-
         }
 
         &-login {
@@ -3556,7 +3678,6 @@
 
         .logo {
             padding: 0 80px;
-
         }
 
         &-login {
@@ -3646,7 +3767,6 @@
                         padding: 12px 20px;
 
                         &-header {
-
                             h4 {
                                 font-size: 22px;
                             }
@@ -3878,7 +3998,6 @@
                         padding: 12px 20px;
 
                         &-header {
-
                             h4 {
                                 font-size: 22px;
                             }
@@ -3920,7 +4039,6 @@
                         padding: 12px 20px;
 
                         &-header {
-
                             h4 {
                                 font-size: 22px;
                             }
@@ -3993,7 +4111,6 @@
                         padding: 12px 20px;
 
                         &-header {
-
                             h4 {
                                 font-size: 22px;
                             }
@@ -4066,7 +4183,6 @@
                         padding: 12px 20px;
 
                         &-header {
-
                             h4 {
                                 font-size: 22px;
                             }
@@ -4139,7 +4255,6 @@
                         padding: 12px 20px;
 
                         &-header {
-
                             h4 {
                                 font-size: 22px;
                             }
@@ -4181,7 +4296,6 @@
                         padding: 12px 20px;
 
                         &-header {
-
                             h4 {
                                 font-size: 22px;
                             }
@@ -4223,7 +4337,6 @@
                         padding: 12px 20px;
 
                         &-header {
-
                             h4 {
                                 font-size: 22px;
                             }
@@ -4296,7 +4409,6 @@
                         padding: 12px 20px;
 
                         &-header {
-
                             h4 {
                                 font-size: 22px;
                             }
@@ -4322,16 +4434,13 @@
                             }
                         }
                     }
-
                 }
             }
         }
     }
-
 }
 
 @include xl {
-
     .cards {
         &-top {
             &-left {
@@ -4341,11 +4450,9 @@
                     h3 {
                         a {
                             font-size: 1.5rem;
-
                         }
                     }
                 }
-
             }
 
             &-mid {
@@ -4355,7 +4462,6 @@
                     h3 {
                         a {
                             font-size: 1.5rem;
-
                         }
                     }
                 }
@@ -4383,7 +4489,6 @@
                 }
             }
         }
-
     }
 
     .picks {

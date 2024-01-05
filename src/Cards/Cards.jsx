@@ -12,73 +12,88 @@ function Cards() {
                 setNews(res.data)
             });
     }, [])
+
+    // get all recent posts 
+    const [recentPosts, setRecentPosts] = useState([])
+    const getRecentPosts = async () => {
+        try {
+            const response = await axios.get(`http://localhost:8000/api/blog`);
+            setRecentPosts(response.data.allBlogs);
+            console.log(response.data.allBlogs);
+        } catch (error) {
+            console.log("Unable to fetch recent posts!", error)
+        }
+    }
+    useEffect(() => {
+        getRecentPosts();
+    }, [])
+
+    const PF = "http://localhost:8000/images/";
+
     return (
         <>
             <div className="cards px-3">
                 <div className="cards-top">
                     <div className="row g-4">
-                        {News.slice(0, 1).map((a) => (
-                            <div className="col-lg-5 col-md-6 col-xl-5">
+                        {recentPosts.slice(0, 1).map((recent, i) => (
+                            <div className="col-lg-5 col-md-6 col-xl-5" key={i}>
                                 <div className="cards-top-left">
                                     <div className="cards-top-left-img">
-                                        {/* <img className='w-100' src="https://preview.colorlib.com/theme/eden/img/magazine/1.jpg" alt="" /> */}
-                                        <img className='w-100' src={a.img} alt="" />
+                                        <img className="w-100" src={PF + recent.image} alt="" style={{ width: '450px', height: '450px' }} />
                                     </div>
                                     <div className="cards-top-left-text">
                                         <div className="sub-heading">
-                                            <a className='' href="">{a.title}</a>
+                                            {/* <h2 className='mt-2 mb-3'><Link to={`/find/${recent._id}`}><a href="">{recent.title}</a></Link></h2> */}
+                                            <h2><Link to={`/find/${recent._id}`}>{recent.title}</Link></h2>
                                         </div>
-                                        <h3 className='mt-2 mb-3'><Link to="/interChild"><a href="">{a.disc}</a></Link></h3>
-                                        <p><span className='currentDate'>March 12 , 2019</span><span className=''> .By Alen Mark</span></p>
+                                        <p><span className='currentDate'>March 12, 2019</span><span className=''> {recent.author}</span></p>
                                     </div>
-
                                 </div>
                             </div>
                         ))}
-                        {News.slice(1, 2).map((a) => (
-                            <div className="col-lg-4 col-md-6 col-xl-4">
-                                <div className="cards-top-mid">
-                                    <div className="cards-top-mid-img">
-                                        <img className='w-100' src={a.img} alt="" />
+
+                        {recentPosts.slice(1, 2).map((recent, i) => (
+                            <div className="col-lg-5 col-md-6 col-xl-5" key={i}>
+                                <div className="cards-top-left">
+                                    <div className="cards-top-left-img">
+                                        <img className='w-100' src={PF + recent.image} alt="" style={{ width: '450px', height: '450px' }} />
                                     </div>
-                                    <div className="cards-top-mid-text">
+                                    <div className="cards-top-left-text">
                                         <div className="sub-heading">
-                                            <a href="">{a.title}</a>
+                                            {/* <h2 className='mt-2 mb-3'><Link to={`/find/${recent._id}`}><a href="">{recent.title}</a></Link></h2> */}
+                                            {/* <h2><Link to={`/find/${recent._id}`}>{recent.title}</Link></h2> */}
                                         </div>
-                                        <h3 className='mt-2 mb-3'><a href="">{a.disc}</a></h3>
-                                        <p><span className='currentDate'>March 12 , 2019</span><span className='text-light'> .By Alen Mark</span></p>
+                                        {/* <a className='' href="">{recent.title}</a> */}
+                                        <h2 className="sub-heading"><Link to={`/find/${recent._id}`}>{recent.title}</Link></h2>
+                                        <p><span className='currentDate'>March 12, 2019 </span><span className=''> {recent.author}</span></p>
                                     </div>
                                 </div>
                             </div>
                         ))}
 
                         <div className="col-lg-3 col-md-12 col-xl-3">
-
                             <div className="row g-4">
-                                {News.slice(2, 4).map((a) => (
-                                    <div className="col-lg-12 col-md-6">
+                                {recentPosts.slice(2, 4).map((recent, i) => (
+                                    <div className="col-lg-12 col-md-6" key={i}>
                                         <div className="cards-top-right">
                                             <div className="cards-top-right-img">
-                                                <img className='w-100' src={a.img} alt="" />
+                                                <img className='w-100' src={PF + recent.image} alt="" />
                                             </div>
                                             <div className="cards-top-right-text text-center">
                                                 <div className="sub-heading">
-                                                    <a className='' href="">{a.title}</a>
+                                                    <Link to={`/find/${recent._id}`}>{recent.title}</Link>
                                                 </div>
-                                                <h6><a href="">{a.disc}</a></h6>
+                                                <h6><a href="">{recent.author}</a></h6>
                                             </div>
                                         </div>
                                     </div>
                                 ))}
                             </div>
-
                         </div>
-
                     </div>
-
-
                 </div>
             </div>
+
             <div className="cards-bottom">
                 <div className="container">
                     <div className="row g-4">

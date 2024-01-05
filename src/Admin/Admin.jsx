@@ -1,7 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Route, useNavigate, Routes } from 'react-router-dom';
+import axios from 'axios';
+
 import './admin.scss'
+import Update from "../Update/Update"
+
 
 function Admin() {
+
+    const [data, setData] = useState({
+        email: "",
+        password: ""
+    });
+    const [message, setMessage] = useState(null);
+
+    const navigate = useNavigate();
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setData((prev) => ({ ...prev, [name]: value }));
+    }
+
+    const handleClick = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post("http://localhost:8000/api/auth/admin-login", data)
+            let token = response.data.token
+
+            let login = localStorage.setItem('token', JSON.stringify(token))
+            if (login !== null) {
+                navigate("/admin-dashboard-wowmandu");
+                alert(response.data.message)
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <>
             <div className="admin">
@@ -19,11 +54,11 @@ function Admin() {
                                     <h6>PLEASE LOGIN TO ADMIN DASHBOARD</h6>
                                 </div>
                                 <div className="admin-login-form text-center">
-                                    <input className='w-100' type="text" placeholder='Enter your email address' />
-                                    <input className='w-100' type="password" placeholder='Enter your Password' />
+                                    <input className='w-100' type="text" placeholder='Enter your email address' name='email' onChange={handleChange} />
+                                    <input className='w-100' type="password" placeholder='Enter your Password' name='password' onChange={handleChange} />
                                 </div>
                                 <div className="submit">
-                                    <input type="submit" value="Login" />
+                                    <input type="submit" value="Login" onClick={handleClick} />
                                 </div>
                                 <div className="forget-password">
                                     <h6 className=' text-center'><a href="">Forget Your Password?</a></h6>
@@ -33,6 +68,13 @@ function Admin() {
                     </div>
                 </div>
             </div>
+
+            <Routes>
+                <Route
+                    path="/update-blog"
+                    element={<Update />}
+                />
+            </Routes>
         </>
     )
 }
