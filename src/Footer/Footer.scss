@@ -1,99 +1,73 @@
-.footer{
+.footer {
+    background-color: #FBF1F2;
+    padding: 40px 0;
 
-    &-top{
-        padding: 80px 0px 60px 0px;
-        &-logo{
-            width: 45%;
-            margin-top: 30px;
-            margin: 20px 0;
-        }
-        &-header{
-            h5{
-                color: #33353b;
-            }
-        }
-        p{
-            color: #797979;
-            font-size: 15px;
-        }
-        ul{
-            li{
-                transition: 0.9s;
-                &:hover{
-                    transform: translateX(10px);
-                }
-            }
-        }
-        .textarea{
-            margin-top: 30px;
-            position: relative;
-            input{
-                width: 100%;
-                padding: 8px 22px;
-                border-radius: 30px;
-                border: 1px solid #e8edf1;
-                position: relative;
-            }
-            .send-icon{
-                position: absolute;
-                color: #fff;
-                background-color: #ff7a7f;
-                padding: 8px 21px 8px 14px;
-                border-radius: 24px;
-                bottom: 1px;
-                border: none;
-                right: 0;
-            }
-        }
+    h5 {
+        font-size: 15px !important;
+        font-weight: 600;
+        line-height: 25px;
+        color: #545454;
+        margin: 0;
     }
 
-    &-bottom{
-        padding: 20px 0;
-        border-top: 1px solid #e8edf1;
-        &-left{
-            p{
-                color: #797979;
-            }
+    // &-logo{
+    //     border-right: solid 1px rgba(0,0,0,.14);
+    //     height: 100%;
+    // }
+    // &-contact{
+    //     border-right: solid 1px rgba(0,0,0,.14);
+    //     height: 100%;
+    // }
+    // &-icon{
+    //     border-right: solid 1px rgba(0,0,0,.14);
+    //     height: 100%;
+    // }
+
+    ul {
+        li {
+            font-size: 20px;
+            color: #545454;
         }
-        &-right{
-            .fb{
-                a{
-                    color: #797979;
-                    &:hover{
-                        color: #3A589D;
-                    }
-                }
-            }
-            .inst{
-                a{
-                    color: #797979;
-                    &:hover{
-                        color: #3A6894;
-                    }
-                }
-            }
-            .twt{
-                a{
-                    color: #797979;
-                    &:hover{
-                        color: #2478BA;
-                    }
-                }
-            }
-            .gg{
-                a{
-                    color: #797979;
-                    &:hover{
-                        color: #4285F4;
-                    }
+
+        .fb {
+            a {
+                color: #545454;
+
+                &:hover {
+                    color: #3A589D;
                 }
             }
         }
 
-        &-mid{
-            p{
-                color: #797979;
+        .inst {
+            a {
+                color: #545454;
+
+                &:hover {
+                    color: #3A6894;
+                }
             }
         }
+
+        .twt {
+            a {
+                color: #545454;
+
+                &:hover {
+                    color: #2478BA;
+                }
+            }
+        }
+
+        .lkdn {
+            a {
+                color: #545454;
+
+                &:hover {
+                    color: #0077B5;
+                }
+            }
+        }
+
     }
 }

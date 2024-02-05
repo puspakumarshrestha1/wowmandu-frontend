@@ -161,352 +161,88 @@ ul.nacc li {
                margin-bottom: 20px;
 
             }
-         }
-      }
-   }
 
-   .trending {
-      padding: 30px 50px;
-      border: 1px solid #E5E5E5;
-      margin-bottom: 0;
-
-      &-header {
-         width: 100%;
-         margin-bottom: 30px;
-         padding: 0;
-
-         h4 {
-            font-weight: 600;
-         }
-      }
-      &-card {
-         padding: 40px 50px;
-         .header {
-            margin-bottom: 20px;
-
-            h6 {
-               font-weight: 600;
+            select {
+               border: 1px solid #E5E5E5;
+               padding: 11px 12px;
+               width: 100%;
+               margin-bottom: 20px;
+               font-family: "Belleza", sans-serif;
+               letter-spacing: 2px;
+               font-size: 14px;
+               background-color: #fff;
                color: #726f6f;
             }
          }
-
-         input {
-            border: 1px solid #E5E5E5;
-            padding: 6px 12px;
-            width: 100%;
-            margin-bottom: 20px;
-            font-family: "Belleza", sans-serif;
-            letter-spacing: 2px;
-            font-size: 14px;
-         }
-
-         textarea {
-            border: 1px solid #E5E5E5;
-            padding: 6px 12px;
-            width: 100%;
-            font-size: 14px;
-            font-family: "Belleza", sans-serif;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-
-         }
-      }
-   }
-
-   .picks {
-      padding: 30px 50px;
-      border: 1px solid #E5E5E5;
-      margin-bottom: 0;
-
-      &-header {
-         width: 100%;
-         margin-bottom: 30px;
-         padding: 0;
-
-         h4 {
-            font-weight: 600;
-         }
-      }
-      &-left {
-         padding: 40px 50px;
-         border-bottom: 1px solid #E5E5E5;
-
-         .header {
-            margin-bottom: 20px;
-
-            h6 {
-               font-weight: 600;
-               color: #726f6f;
-            }
-         }
-
-         input {
-            border: 1px solid #E5E5E5;
-            padding: 6px 12px;
-            width: 100%;
-            margin-bottom: 20px;
-            font-family: "Belleza", sans-serif;
-            letter-spacing: 2px;
-            font-size: 14px;
-         }
-
-         textarea {
-            border: 1px solid #E5E5E5;
-            padding: 6px 12px;
-            width: 100%;
-            font-size: 14px;
-            font-family: "Belleza", sans-serif;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-
-         }
-      }
-   }
-
-   .national {
-      padding: 30px 50px;
-      border: 1px solid #E5E5E5;
-      margin-bottom: 0;
-      background-color: #F5F5F9;
-
-      &-header {
-         width: 100%;
-         margin-bottom: 30px;
-         padding: 0;
-
-         h4 {
-            font-weight: 600;
-         }
-      }
-      &-left {
-         padding: 40px 50px;
-         border-bottom: 1px solid #E5E5E5;
-
-         .header {
-            margin-bottom: 20px;
-
-            h6 {
-               font-weight: 600;
-               color: #726f6f;
-            }
-         }
-
-         input {
-            border: 1px solid #E5E5E5;
-            padding: 6px 12px;
-            width: 100%;
-            margin-bottom: 20px;
-            font-family: "Belleza", sans-serif;
-            letter-spacing: 2px;
-            font-size: 14px;
-         }
-
-         textarea {
-            border: 1px solid #E5E5E5;
-            padding: 6px 12px;
-            width: 100%;
-            font-size: 14px;
-            font-family: "Belleza", sans-serif;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-
-         }
-      }
-   }
-
-   .international {
-      padding: 30px 50px;
-      border: 1px solid #E5E5E5;
-      margin-bottom: 0;
-      background-color: #F5F5F9;
-
-      &-header {
-         width: 100%;
-         margin-bottom: 30px;
-         padding: 0;
-
-         h4 {
-            font-weight: 600;
-         }
-      }
-      &-left {
-         padding: 40px 50px;
-         border-bottom: 1px solid #E5E5E5;
-
-         .header {
-            margin-bottom: 20px;
-
-            h6 {
-               font-weight: 600;
-               color: #726f6f;
-            }
-         }
-
-         input {
-            border: 1px solid #E5E5E5;
-            padding: 6px 12px;
-            width: 100%;
-            margin-bottom: 20px;
-            font-family: "Belleza", sans-serif;
-            letter-spacing: 2px;
-            font-size: 14px;
-         }
-
-         textarea {
-            border: 1px solid #E5E5E5;
-            padding: 6px 12px;
-            width: 100%;
-            font-size: 14px;
-            font-family: "Belleza", sans-serif;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-
-         }
-      }
-   }
-
-   .politics {
-      padding: 30px 50px;
-      border: 1px solid #E5E5E5;
-      margin-bottom: 0;
-      background-color: #F5F5F9;
-
-      &-header {
-         width: 100%;
-         margin-bottom: 30px;
-         padding: 0;
-
-         h4 {
-            font-weight: 600;
-         }
-      }
-      &-left {
-         padding: 40px 50px;
-         border-bottom: 1px solid #E5E5E5;
-
-         .header {
-            margin-bottom: 20px;
-
-            h6 {
-               font-weight: 600;
-               color: #726f6f;
-            }
-         }
-
-         input {
-            border: 1px solid #E5E5E5;
-            padding: 6px 12px;
-            width: 100%;
-            margin-bottom: 20px;
-            font-family: "Belleza", sans-serif;
-            letter-spacing: 2px;
-            font-size: 14px;
-         }
-
-         textarea {
-            border: 1px solid #E5E5E5;
-            padding: 6px 12px;
-            width: 100%;
-            font-size: 14px;
-            font-family: "Belleza", sans-serif;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-
-         }
-      }
-   }
-
-   .sports {
-      padding: 30px 50px;
-      border: 1px solid #E5E5E5;
-      margin-bottom: 0;
-      background-color: #F5F5F9;
-
-      &-header {
-         width: 100%;
-         margin-bottom: 30px;
-         padding: 0;
-
-         h4 {
-            font-weight: 600;
-         }
-      }
-      &-left {
-         padding: 40px 50px;
-         border-bottom: 1px solid #E5E5E5;
-
-         .header {
-            margin-bottom: 20px;
-
-            h6 {
-               font-weight: 600;
-               color: #726f6f;
-            }
-         }
-
-         input {
-            border: 1px solid #E5E5E5;
-            padding: 6px 12px;
-            width: 100%;
-            margin-bottom: 20px;
-            font-family: "Belleza", sans-serif;
-            letter-spacing: 2px;
-            font-size: 14px;
-         }
-
-         textarea {
-            border: 1px solid #E5E5E5;
-            padding: 6px 12px;
-            width: 100%;
-            font-size: 14px;
-            font-family: "Belleza", sans-serif;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-
-         }
-      }
-   }
-
-   .banner {
-      padding: 30px 50px;
-      border: 1px solid #E5E5E5;
-      margin-bottom: 0;
-      background-color: #F5F5F9;
-
-      &-header {
-         width: 100%;
-         margin-bottom: 30px;
-         padding: 0;
-
-         h4 {
-            font-weight: 600;
-         }
-      }
-      &-img {
-         padding: 40px 50px;
-
-         .header {
-            margin-bottom: 20px;
-
-            h6 {
-               font-weight: 600;
-               color: #726f6f;
-            }
-         }
-
-         input {
-            border: 1px solid #E5E5E5;
-            padding: 6px 12px;
-            width: 100%;
-            margin-bottom: 20px;
-            font-family: "Belleza", sans-serif;
-            letter-spacing: 2px;
-            font-size: 14px;
-         }
-
       }
    }
 }
+
+.all-blogs{
+   overflow-x: hidden;
+   .update-btn{
+      
+      input{
+         width: 100%;
+         background-color: #3F51B5;
+         border: none;
+         color: #fff;
+         padding: 4px 16px;
+      }
+   }
+   .delete-btn{
+      
+      input{
+         width: 100%;
+         background-color: rgb(219, 9, 9);
+         border: none;
+         color: #fff;
+         padding: 4px 16px;
+      }
+   }
+}
+
+.banner {
+   padding: 30px 50px;
+   border: 1px solid #E5E5E5;
+   margin-bottom: 0;
+   background-color: #F5F5F9;
+
+   &-header {
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 0;
+
+      h4 {
+         font-weight: 600;
+      }
+   }
+
+   &-img {
+      padding: 40px 50px;
+
+      .header {
+         margin-bottom: 20px;
+
+         h6 {
+            font-weight: 600;
+            color: #726f6f;
+         }
+      }
+
+      input {
+         border: 1px solid #E5E5E5;
+         padding: 6px 12px;
+         width: 100%;
+         margin-bottom: 20px;
+         font-family: "Belleza", sans-serif;
+         letter-spacing: 2px;
+         font-size: 14px;
+      }
+
+   }
+}
+
 
 ul.nacc li.active {
    transition-delay: .3s;

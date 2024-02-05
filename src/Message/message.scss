@@ -1,0 +1,90 @@
+/* message.scss or your CSS file */
+.message {
+    position: relative;
+
+    .message-btn {
+        position: fixed;
+        top: 65%;
+        right: -47px;
+        letter-spacing: 1px;
+        transform: translateY(-50%) rotate(-90deg);
+        z-index: 9999;
+        background-color: #F56960;
+        color: #fff;
+        padding: 6px 18px;
+        border-radius: 0;
+    }
+
+    .custom-modal-content {
+        background-color: #fff;
+    }
+
+    .custom-modal-body {
+        background-color: #fff;
+    }
+
+    .modal.fade.show {
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity if needed */
+    }
+
+    .modal-body {
+        background-color: #fff;
+        padding: 10px 40px 30px 40px;
+        // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+        .modal-header {
+            cursor: pointer;
+
+            button {
+                background-color: #F56960;
+                color: #fff;
+            }
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #33353b;
+        }
+
+        .form {
+
+            input {
+                border: 1px solid #E5E5E5;
+                padding: 4px 14px;
+                width: 100%;
+                margin-bottom: 15px;
+                border-radius: 8px;
+                font-family: 'Belleza', sans-serif;
+                letter-spacing: 2px;
+                font-size: 14px;
+            }
+
+            textarea {
+                border: 1px solid #E5E5E5;
+                padding: 4px 14px;
+                width: 100%;
+                margin-bottom: 15px;
+                border-radius: 8px;
+                font-family: 'Belleza', sans-serif;
+                letter-spacing: 2px;
+                font-size: 14px;
+            }
+
+            button {
+                background-color: #F56960;
+                border: none;
+                color: #fff;
+
+                &:hover {
+                    color: #F5F5F9;
+                }
+
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

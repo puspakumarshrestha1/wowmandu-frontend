@@ -13,11 +13,11 @@ function Sports() {
     }, [])
 
     const [category, setCategory] = useState('sports');
-    const [showBlogCat,setShowBlogCat] = useState([]);
+    const [showBlogCat, setShowBlogCat] = useState([]);
     const filterWithCategory = async () => {
         try {
             const response = await axios.get(`http://localhost:8000/api/blog?category=${category}`)
-            setShowBlogCat(response.data.blog)
+            setShowBlogCat(response.data.blogs)
             console.log(response.data)
         } catch (error) {
             console.log("Unable to search blog with category:", error)
@@ -25,7 +25,10 @@ function Sports() {
     }
     useEffect(() => {
         filterWithCategory();
-    }, [])
+    }, [category])
+
+    const PF = "http://localhost:8000/images/";
+
 
     return (
         <>
@@ -38,42 +41,45 @@ function Sports() {
                         </div>
 
                         <div className="row g-4">
-                            {/* {showBlogCat.map((recent,i) => (
-                                <div className="col-md-12 col-lg-6" key={i}>
-                                    <div className="sports-left">
-                                        <div className="sports-left-img">
-                                            <img className='w-100' src={recent.image} alt="" />
+                            {showBlogCat.slice(0, 1).map((catg, i) => (
+                                <div className="col-lg-7 col-md-12">
+                                    <div className="international-left">
+                                        <div className="international-left-img">
+                                            <img className='w-100' src={PF + catg.image} alt="" />
                                         </div>
-                                        <div className="sports-left-text">
+                                        <div className="international-left-text">
                                             <div className="sub-heading">
-                                                <a href="">Sports / <span className='currentDate'>Dec 8,2023</span></a>
+                                                <a className='' href="">shoes / <span className='currentDate'>March 15, 2019</span></a>
                                             </div>
-                                            <h4><a href="">desc</a></h4>
-                                            <p><a href="">{recent.author}</a></p>
+                                            <h3 className='mt-2 mb-3'> <a href="">{catg.title}</a></h3>
+                                            <p><a href="">{catg.author}</a></p>
                                         </div>
                                     </div>
                                 </div>
-                            ))} */}
-
-                            <div className="col-md-12 col-lg-6">
-                                <div className="sports-right">
-                                    <div className="row g-4">
-                                        {News.slice(21, 25).map((a) => (
-                                            <div className="col-md-6">
-                                                <div className="sports-right-img">
-                                                    <img className='w-100' src={a.img} alt="" />
-                                                </div>
-                                                <div className="sports-right-text">
-                                                    <div className="sub-heading">
-                                                        <a href="">Sports / <span className='currentDate'>Dec 8,2023</span></a>
-                                                    </div>
-                                                    <h4><a href="">{a.disc}</a></h4>
-                                                    <p><span className='currentDate'></span><span className='text-dark'> .By Alen Mark</span></p>
+                            ))}
+                            <div className="col-lg-5 col-md-12">
+                                {showBlogCat.slice(1, 3).map((catg, i) => (
+                                    <div className="international-right">
+                                        <div className="row mb-lg-4 mb-md-4">
+                                            <div className="col-md-5 col-sm-5  pe-md-0 pe-sm-0">
+                                                <div className="international-right-img">
+                                                    <img className='w-100 int-img' src={PF + catg.image} alt="" />
                                                 </div>
                                             </div>
-                                        ))}
+                                            <div className="col-md-7 col-sm-7  ps-md-0 ps-sm-0">
+                                                <div className="international-right-text p-3">
+                                                    <div className="sub-heading">
+                                                        <a className='' href="">shoes / <span className='currentDate'>March 15, 2019</span></a>
+                                                        <h3 className='mt-2 mb-3'> <a href="">{catg.title}</a></h3>
+                                                    </div>
+                                                    <p><a href="">{catg.author}</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
-                                </div>
+                                ))}
+
                             </div>
                         </div>
                     </div>

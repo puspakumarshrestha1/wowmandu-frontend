@@ -4526,4 +4526,35 @@
     .international {
         padding: 80px 0;
     }
+    .nat-img{
+        width: 500px;
+        height: 250px;
+        object-fit: cover;
+    }
+}
+@include xxl{
+    .nat-img{
+        width: 500px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .edit-img{
+        width: 400px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .int-img{
+        width: 300px;
+        height: 180px;
+        object-fit: cover;
+    }
+    .card-img{
+        height: 250px;
+        object-fit: cover;
+    }
+    .cards-top-right-img{
+        img{
+            height: 220px;
+        }
+    }
 }

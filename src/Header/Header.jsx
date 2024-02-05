@@ -25,8 +25,8 @@ function Header() {
 
     return (
         <>
-            <div className="header">
-                <div className="header-top">
+            <div className="header ">
+                <div className="header-top ">
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-4 col-sm-6 col-xs-6 icon-and-burger">

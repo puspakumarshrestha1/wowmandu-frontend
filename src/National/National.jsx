@@ -3,14 +3,7 @@ import axios from 'axios'
 import './national.scss'
 
 function National() {
-    const [News, setNews] = useState([])
-    useEffect(() => {
-        axios.get('Data/news.json')
-            .then(res => {
-                console.log(res.data);
-                setNews(res.data)
-            });
-    }, [])
+   
 
     const [category, setCategory] = useState('national');
     const [showBlogCat, setShowBlogCat] = useState([]);
@@ -39,24 +32,24 @@ function National() {
                             <p>Abundantly creeping saw forth spirit can made appear fourth us.</p>
                         </div>
                         <div className="row">
-                            {showBlogCat.slice(0, 1).map((catg, i) => (
-                                <div className="col-lg-7 col-md-12" key={i}>
+                            {showBlogCat.map((catg, i) => (
+                                <div className="col-lg-4 col-md-12" key={i}>
                                     <div className="national-left">
                                         <div className="national-left-img">
-                                            <img className='w-100' src={PF + catg.image} alt="" />
+                                            <img className='w-100 nat-img' src={PF + catg.image} alt="" />
                                             {/* <img className='w-100' src="" alt="img" /> */}
                                         </div>
                                         <div className="national-left-text">
                                             <div className="sub-heading">
                                                 <a className='' href="">shoes / <span className='currentDate'>March 15, 2019</span></a>
                                             </div>
-                                            <h3 className='mt-2 mb-3'> <a href="">{catg.title}</a></h3>
+                                            <h3 className='mt-2 mb-3 fs-5'> <a href="">{catg.title}</a></h3>
                                             <p><a href="">{catg.author}</a></p>
                                         </div>
                                     </div>
                                 </div>
                             ))}
-                            <div className="col-lg-5 col-md-12">
+                            {/* <div className="col-lg-4 col-md-12">
                                 {showBlogCat.slice(2, 5).map((catg,i) => (
                                     <div className="national-right" key={i}>
                                         <div className="row mb-lg-4 mb-md-4">
@@ -77,7 +70,29 @@ function National() {
                                         </div>
                                     </div>
                                 ))}
-                            </div>
+                            </div> */}
+                            {/* <div className="col-lg-4 col-md-12">
+                                {showBlogCat.slice(2, 5).map((catg,i) => (
+                                    <div className="national-right" key={i}>
+                                        <div className="row mb-lg-4 mb-md-4">
+                                            <div className="col-md-5 col-sm-5  pe-md-0 pe-sm-0">
+                                                <div className="national-right-img">
+                                                    <img className='w-100 nat-img' src={PF + catg.image} alt="" />
+                                                </div>
+                                            </div>
+                                            <div className="col-md-7 col-sm-7  ps-md-0 ps-sm-0">
+                                                <div className="national-right-text p-3">
+                                                    <div className="sub-heading">
+                                                        <a href="">{catg.title}</a>
+                                                    </div>
+                                                    <h4><a href="">{catg.title}</a></h4>
+                                                    <p><a href="">{catg.author}</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div> */}
                         </div>
                     </div>
                 </div>

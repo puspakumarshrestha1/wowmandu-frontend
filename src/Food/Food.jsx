@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import './international.scss'
+import './food.scss'
 
-function International() {
-   
-    const [category, setCategory] = useState('lifestyle');
+function Food() {
+    const [News, setNews] = useState([])
+    useEffect(() => {
+        axios.get('Data/news.json')
+            .then(res => {
+                console.log(res.data);
+                setNews(res.data)
+            });
+    }, [])
+
+    
+    const [category, setCategory] = useState('food');
     const [showBlogCat, setShowBlogCat] = useState([]);
     const filterWithCategory = async () => {
         try {
@@ -28,7 +37,7 @@ function International() {
         <div className="international">
                 <div className="container">
                     <div className="international-header text-center">
-                        <h3 className='mb-4'><a href="">Lifestyle</a></h3>
+                        <h3 className='mb-4'><a href="">Foods</a></h3>
                         <p>Abundantly creeping saw forth spirit can made appear fourth us.</p>
                     </div>
                     <div className="row">
@@ -81,4 +90,4 @@ function International() {
     )
 }
 
-export default International
+export default Food

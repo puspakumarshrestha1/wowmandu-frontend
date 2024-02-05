@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { useParams,Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 import './internationalChild.scss'
-
 
 function InternationalChild() {
     const blogID = useParams().id;
@@ -19,6 +18,8 @@ function InternationalChild() {
     useEffect(() => {
         getBlog();
     }, [blogID])
+
+    
 
     //post comment section 
     const [comment, setComment] = useState({
@@ -70,6 +71,15 @@ function InternationalChild() {
 
     const PF = "http://localhost:8000/images/";
 
+    const [showButton, setShowButton] = useState(false);
+
+    const handleTextAreaClick = () => {
+        setShowButton(true);
+    };
+
+    const handleBlur = () => {
+        setShowButton(false);
+    };
     return (
         <>
             <div className="interChild">
@@ -90,31 +100,40 @@ function InternationalChild() {
                                             <p>{showBlog.blogContent}</p>
                                         </div>
                                     </div>
+                                    {/* comments  */}
+                    <div className="comment">
+                        <form action="">
+                            <label htmlFor="">Enter your fullname</label>
+                            <input type="text" name='fullName' placeholder='Fullname' onChange={handleCommentChange} />
+                            <label htmlFor="">Enter your email</label>
+                            <input type="text" name='email' placeholder='Email' onChange={handleCommentChange} />
+                            <label htmlFor="">Your Comment</label>
+                            <textarea name="comment" id="" cols="30" rows="10" placeholder='Comment' onChange={handleCommentChange}></textarea>
+                            <button type="submit" onClick={handlePostComment}>Post Comment</button>
+                        </form>
+                    </div>
+                    <h6><a href="">{getComment.length} Comments</a></h6>
+                    {getComment.map((comment, i) => (
+                        <div className="quote" key={i}>
+                            <div className="quote-inner">
+                                <p><em>"{comment.comment}"</em></p>
+                                <h6>-{comment.fullName}</h6>
+                            </div>
+                        </div>
+                    ))}
                                 </div>
                             )
                         }
 
                         <div className="col-md-4">
                             <div className="interChild-right">
-                                <div className="category">
-                                    <div className="category-header">
-                                        <h5>Category</h5>
-                                    </div>
-                                    <div className="category-items">
-                                        <ul>
-                                            <li><a href="">Sports</a></li>
-                                            <li><a href="">Travels</a></li>
-                                            <li><a href="">International</a></li>
-                                            <li className='border-0'><a href="">Politics</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                               
                                 <div className="recent">
                                     <div className="recent-header">
                                         <h5>Recent Posts</h5>
                                     </div>
 
-                                    {recentPosts.slice(0,5).map((recent, i) => (
+                                    {recentPosts.slice(0, 5).map((recent, i) => (
                                         <div className="row align-items-center mb-4" key={i}>
                                             <div className="col-md-4">
                                                 <div className="recent-img">
@@ -151,27 +170,7 @@ function InternationalChild() {
                             </div>
                         </div>
                     </div>
-                    {/* comments  */}
-                    <div className="comment-section">
-                        <form action="">
-                            <label htmlFor="">Enter your fullname</label>
-                            <input type="text" name='fullName' placeholder='Fullname' onChange={handleCommentChange} />
-                            <label htmlFor="">Enter your email</label>
-                            <input type="text" name='email' placeholder='Email' onChange={handleCommentChange} />
-                            <label htmlFor="">Your Comment</label>
-                            <textarea name="comment" id="" cols="30" rows="10" placeholder='Comment' onChange={handleCommentChange}></textarea>
-                            <button type="submit" onClick={handlePostComment}>Post Comment</button>
-                        </form>
-                    </div>
-                    <h6><a href="">{getComment.length} Comments</a></h6>
-                    {getComment.map((comment, i) => (
-                        <div className="quote" key={i}>
-                            <div className="quote-inner">
-                                <p><em>"{comment.comment}"</em></p>
-                                <h6>-{comment.fullName}</h6>
-                            </div>
-                        </div>
-                    ))}
+                    
                 </div>
             </div>
         </>
