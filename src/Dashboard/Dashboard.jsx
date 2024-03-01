@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./dashboard.scss";
+import "./Dashboard.scss";
 import { Link, useNavigate } from "react-router-dom";
 
 function Dashboard() {
